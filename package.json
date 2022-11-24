@@ -14,7 +14,10 @@
   },
   "keywords": [],
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "canvas-confetti": "^1.6.0",
+    "colorthief": "^2.2.0"
+  },
   "devDependencies": {
     "css-loader": "^6.7.1",
     "gh-pages": "^4.0.0",
