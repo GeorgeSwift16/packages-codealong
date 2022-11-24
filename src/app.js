@@ -2,7 +2,7 @@ import "./style.scss";
 import confetti from "canvas-confetti";
 import ColorThief from "colorthief";
 
-// to deploy type https://*your-username*.github.io/*your-repo-name* in the packages.json file
+// to deploy type https://GeorgeSwift16.github.io/packages-codealong in the packages.json file
 // using color thief, 
 // import color thief then read nstruction, we need to create a constant for it.
 const colorThief = new ColorThief();
@@ -52,14 +52,9 @@ const onImageLoad = () => {
 };
 
 // now to change the background image 
-const handleImageChange = () => {
-    if(userImageInput.innerText){
-        dogImage.src = userImageInput.innerText;
-    } else {
-        dogImage.src = dogImage.src;
-    }
+const handleUserImageInput = (event) => {
+    dogImage.src = event.target.value;
 };
-
 
 confettibutton.addEventListener("click", fireConfetti);
 
@@ -68,10 +63,13 @@ confettibutton.addEventListener("click", fireConfetti);
 
 // otherwise, wait for the "load" event, then run the function
 
-userImageInput.addEventListener("input", handleImageChange);
-console.log(dogImage.src);
+
+
+
+
 if(dogImage.complete){
     onImageLoad();
 } else {
     dogImage.addEventListener("load", onImageLoad);
 };
+userImageInput.addEventListener("input", handleUserImageInput);

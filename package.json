@@ -2,8 +2,8 @@
   "name": "packages-codealong",
   "version": "1.0.0",
   "description": "Codealong for NPM lesson",
-  "homepage": "",
-  "author": "",
+  "homepage": "https://GeorgeSwift16.github.io/packages-codealong",
+  "author": "George-Swift",
   "private": true,
   "scripts": {
     "build": "webpack --config ./webpack.config.js",
